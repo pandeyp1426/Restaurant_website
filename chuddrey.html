@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuddrey Restaurant</title>
+    <!-- Linking an external CSS file for styling -->
+    <link rel="stylesheet" href="styless.css">
+
+</head>
+<body>
+    <!-- Header section of the webpage -->
+    <div class="header">
+        <h1>Chuddrey Restaurant</h1>
+        
+        <p>Food Menu</p>
+    </div>
+    
+    <!-- Form for processing the order, pointing to a PHP script -->
+    <form action="process_order.php" method="post" onsubmit = "return validateForm()" novalidate>
+        <div class="items">
+            <!-- Individual item section -->
+            <div class="item">
+                <!-- Item image -->
+                <img src="brownie.jpg" alt="Brownie" class="item-image">
+                <!-- Item title -->
+                <h3>Brownie</h3>
+                <!-- Item price -->
+                <p class="price">Price - $5.69</p>
+                <!-- Checkbox for selecting the item -->
+                <label>
+                    <input type="checkbox" name="selectedItems[]" value="Brownie-5.69">
+                    <span>Add to Cart</span>
+                </label>
+            </div>
+			<div class="item">
+                <!-- Item image -->
+                <img src="SpringRoll.jpg" alt="Spring Roll" class="item-image">
+                <!-- Item title -->
+                <h3>Spring Roll</h3>
+                <!-- Item price -->
+                <p class="price">Price - $7.69</p>
+                <!-- Checkbox for selecting the item -->
+                <label>
+                    <input type="checkbox" name="selectedItems[]" value="Spring Roll-7.69">
+                    <span>Add to Cart</span>
+                </label>
+            </div>
+			<div class="item">
+                <!-- Item image -->
+                <img src="lasagna.jpg" alt="Lasagna" class="item-image">
+                <!-- Item title -->
+                <h3>Lasagna</h3>
+                <!-- Item price -->
+                <p class="price">Price - $5.69</p>
+                <!-- Checkbox for selecting the item -->
+                <label>
+                    <input type="checkbox" name="selectedItems[]" value="Lasagna-5.69">
+                    <span>Add to Cart</span>
+                </label>
+            </div>
+            <!-- Repeat of the item section for different items -->
+            <div class="item">
+                <img src="cheeseSnackjpg.jpg" alt="Cheese Snack" class="item-image">
+                <h3>Cheese Snack</h3>
+                <p class="price">Price - $20.49</p>
+                <label>
+                    <input type="checkbox" name="selectedItems[]" value="Cheese Snack-11.49">
+                    <span>Add to Cart</span>
+                </label>
+            </div>
+            <div class="item">
+                <img src="asparagusSteak.jpg" alt="Asparagus Steak" class="item-image">
+                <h3>Asparagus Steak</h3>
+                <p class="price">Price - $19</p>
+                <label>
+                    <input type="checkbox" name="selectedItems[]" value="Asparagus Steak-19">
+                    <span>Add to Cart</span>
+                </label>
+            </div>
+            <div class="item">
+                <img src="hamburger.jpg" alt="Hamburger" class="item-image">
+                <h3>Hamburger</h3>
+                <p class="price">Price - $5.59</p>
+                <label>
+                    <input type="checkbox" name="selectedItems[]" value="Hamburger-5.59">
+                    <span>Add to Cart</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Order form section for customer information and payment -->
+        <div class="order-form">
+            <h2>Delivery Information</h2>
+            <!-- Section for customer's personal information -->
+            <div class="form-row">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="firstName" required>
+            </div>
+            <div class="form-row">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lastName" required>
+            </div>
+            <div class="form-row">
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+            <div class="form-row">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-row">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-row">
+                <label for="zip">ZIP:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+			<div class="form-row">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <!-- Payment method selection -->
+            <div class="form-row">
+                <div class="payment-methods">
+                    <label><input type="radio" name="paymentMethod" value="Mastercard"> Mastercard</label>
+                    <label><input type="radio" name="paymentMethod" value="Visa"> Visa</label>
+                    <label><input type="radio" name="paymentMethod" value="AmericanExpress"> American Express</label>
+                </div>
+            </div>
+            <!-- submit button for the form -->
+            <div class="form-row">
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </form>
+	<!--js validation-->
+		<script src="validation.js"></script>
+</body>
+</html>

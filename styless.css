@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /*background image */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text color for better readability */
+}
+
+.header h1,
+.header p {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /*white background */
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.item {
+    width: calc(40% - 20px); /* Two products per row */
+    margin: 20px;
+    background-color: #fff; /* White background for product cards */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*shadow for the cards */
+}
+
+.item img {
+    max-width: 100%; /* Responsive images */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.item button {
+    background-color: #5C6BC0; /*blue for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Full width button */
+}
+
+.item button:hover {
+    background-color: #3F51B5; /* Darker shade of blue on hover */
+}
+
+.order-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.order-form h2 {
+    text-align: center;
+}
+
+.order-form .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-form .form-row label,
+.order-form .form-row input[type="text"],
+.order-form .form-row .payment-methods {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.order-form .form-row label {
+    margin-right: 20px;
+}
+
+.order-form .form-row:last-child {
+    margin-bottom: 0;
+}
+
+.order-form .payment-methods label {
+    margin-right: 10px;
+}
+
+.order-form input[type="submit"] {
+    background-color: #5C6BC0;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    align-self: center;
+}
+
+.order-form input[type="submit"]:hover {
+    background-color: #3F51B5;
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: calc(100% - 40px); /* Full width on smaller screens */
+    }
+
+    .order-form .form-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .order-form .form-row input[type="text"],
+    .order-form .form-row .payment-methods {
+        margin-right: 0;
+    }
+
+    /* Additional styling for the payment methods to ensure proper alignment */
+    .order-form .payment-methods {
+        justify-content: space-between;
+    }
+
+    .order-form .payment-methods label {
+        flex: 0; /* do not grow or shrink */
+    }
+
+    /* Styling for the submit button on mobile to ensure it looks good */
+    .order-form input[type="submit"] {
+        margin-top: 10px; /* Adds a little space above the submit button */
+        width: 100%; /* Full width button on smaller screens */
+    }
